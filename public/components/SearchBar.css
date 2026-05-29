@@ -1,0 +1,90 @@
+.searchbar {
+  background: #16162a;
+  border: 1px solid #2d2d44;
+  border-radius: 16px;
+  padding: 20px;
+  color: #e0e0e0;
+}
+
+.searchbar__title {
+  margin: 0 0 16px;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.searchbar__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.searchbar__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.searchbar__field label {
+  font-size: 0.85rem;
+  color: #a0a0c0;
+}
+
+.searchbar__field input,
+.searchbar__field select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #2d2d44;
+  background: #0f0f1f;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.searchbar__field input:focus,
+.searchbar__field select:focus {
+  border-color: #7aa2ff;
+}
+
+.searchbar__row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.searchbar__row .searchbar__field {
+  flex: 1;
+}
+
+.searchbar__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+  align-items: center;
+}
+
+.searchbar__btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  background: #7aa2ff;
+  color: #0b0b15;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.searchbar__btn:hover {
+  opacity: 0.9;
+}
+
+.searchbar__btn--secondary {
+  background: #2d2d44;
+  color: #e0e0e0;
+}
+
+.searchbar__hint {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: #8888aa;
+}
