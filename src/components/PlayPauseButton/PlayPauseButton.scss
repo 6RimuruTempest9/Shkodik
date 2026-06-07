@@ -1,0 +1,52 @@
+// PlayPauseButton.scss
+$button-size: 40px;
+$icon-size: 24px;
+$primary-color: #007bff;
+$transition-speed: 0.2s;
+
+@mixin flex-center {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin hover-effect {
+    transition: opacity $transition-speed ease, transform 0.1s ease;
+    
+    &:hover {
+        opacity: 0.8;
+    }
+    
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.play-pause-button {
+    @include flex-center;
+    @include hover-effect;
+    
+    width: $button-size;
+    height: $button-size;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    
+    &:focus-visible {
+        outline: 2px solid $primary-color;
+        outline-offset: 2px;
+    }
+    
+    &__icon {
+        width: $icon-size;
+        height: $icon-size;
+        display: block;
+    }
+    
+    &--playing {
+        .play-pause-button__icon {
+            filter: drop-shadow(0 0 2px $primary-color);
+        }
+    }
+}
